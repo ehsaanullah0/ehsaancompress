@@ -63,13 +63,16 @@ Whether you're preparing an image for a government website, online form, applica
 ---
 
 
-<img width="1183" height="277" alt="image" src="https://github.com/user-attachments/assets/1063dc12-c3f0-4546-a270-bf87860cc1a7" />
+<img width="1317" height="388" src="https://github.com/user-attachments/assets/ae98ca57-506d-4012-a0e5-a1cb1594e75b" />
 
-<img width="1171" height="390" alt="image" src="https://github.com/user-attachments/assets/2bb5f2b1-288c-433f-9f2c-46fad711d100" />
+<img width="1229" height="445" src="https://github.com/user-attachments/assets/83156964-b002-4e7e-a115-adf5a09e5ac4" />
 
-<img width="1149" height="483" alt="image" src="https://github.com/user-attachments/assets/12b18464-43ba-4f62-93d0-d20e1bff9961" />
+<img width="1268" height="330" src="https://github.com/user-attachments/assets/b0f73cf8-c93c-4052-8a5a-0e6cc5822bfe" />
 
-<img width="1195" height="139" alt="image" src="https://github.com/user-attachments/assets/2dd30231-aed7-49ef-8955-c5c5483b1378" />
+<img width="1269" height="232" alt="image" src="https://github.com/user-attachments/assets/38213330-3c8a-4220-a543-5eec849cc965" />
+
+<img width="1101" height="669" alt="image" src="https://github.com/user-attachments/assets/dbecbc8e-c857-4e7d-b6e3-e89b8db28dbc" />
+
 
 
 ## 💡 MADE FOR REAL-WORLD UPLOADS
