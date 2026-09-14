@@ -136,7 +136,7 @@ Keep control of your files.**
 
 # 💛 SUPPORT THE DEVELOPMENT
 
-  <img width="250" height="250" alt="Support" src="https://github.com/user-attachments/assets/42e2d89c-9449-4e18-8ee6-d7fe5960ac79" />
+<img width="250" height="250" alt="ehsaan-qr-1024x1024 (6)" src="https://github.com/user-attachments/assets/d5b5a192-3233-4bf8-83b1-f8e891d46c1f" />
 </p>
 
 <p align="center">
