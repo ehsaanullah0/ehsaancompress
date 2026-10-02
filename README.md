@@ -131,52 +131,15 @@ Keep control of your files.**
 ---
 
 # 💛 SUPPORT THE DEVELOPMENT
+## [ CLICK HERE TO PAY DIRECTLY.](https://ehsaan.odoo.com/about-us)
 
-<img width="250" height="250" alt="ehsaan-qr-1024x1024 (6)" src="https://github.com/user-attachments/assets/d5b5a192-3233-4bf8-83b1-f8e891d46c1f" />
+<img width="250" height="250" alt="ehsaan-qr-1024x1024 (1)" src="https://github.com/user-attachments/assets/7139284e-c5e5-424a-bd52-aa71ccc392a8" />
 </p>
 
 <p align="center">
   <sub>If you find something useful here, a ⭐ is always appreciated.</sub>
 </p>
 
-## 📌 PROJECT
-
-Part of the **EHSAAN** collection of personal web projects, experiments, and useful digital tools.
-
-Built with curiosity.
-Improved through experimentation.
-Made to be useful.
-
----
-
-<p align="center">
-## ✦ FINDING GOOD RESOURCES SHOULDN'T BE HARD.
-
-<p align="center">
-  <a href="https://ehsaan.odoo.com/" target="_blank">
-<img width="130" height="130" alt="cropped_circle_image" src="https://github.com/user-attachments/assets/336454db-ef7d-4003-b33a-db16a945ae3c" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="mailto:worsmon@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  &nbsp;
-  <a href="https://github.com/worsmon-org">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  &nbsp;
-  <a href="https://ehsaan.odoo.com/">
-    <img src="https://img.shields.io/badge/Website-0A84FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/ehsaanullah0/niagara-premium/releases/tag/v.10.21">
-    <img src="https://img.shields.io/badge/Release-Niagara.pro-c9b58a?style=for-the-badge" />
-  </a>
----
 
 ### 🎗️ EHSAAN ULLAH
 
