@@ -126,9 +126,13 @@ That means your images don't need to become part of some mysterious cloud storag
 **Compress your images.
 Keep control of your files.**
 
-🔗 **https://ehsaancompress.ai.studio/**
+## 🔗 **https://ehsaancompress.ai.studio/**
 
 ---
+<div align="center">
+
+## MADE BY EHSAAN ULLAH
+**Make useful things. Make them feel good to use.**
 
 # 💛 SUPPORT THE DEVELOPMENT
 ## [ CLICK HERE TO PAY DIRECTLY.](https://ehsaan.odoo.com/about-us)
@@ -141,6 +145,20 @@ Keep control of your files.**
 </p>
 
 
-### 🎗️ EHSAAN ULLAH
+**EHSAAN ULLAH**
 
-**Simple things. Thoughtfully made.**
+<a href="mailto:worsmon@gmail.com">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
+&nbsp;
+<a href="https://github.com/ehsaanullah0">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+&nbsp;
+<a href="https://ehsaan.odoo.com/">
+  <img src="https://img.shields.io/badge/Website-0A84FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website">
+</a>
+
+<sub>Built with curiosity, too many tabs, and the occasional “let's see what happens.”</sub>
+
+</div>
