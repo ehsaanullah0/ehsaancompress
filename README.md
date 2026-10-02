@@ -12,33 +12,25 @@ A simple, fast, and privacy-friendly image compression tool built to make reduci
 Built for smaller files.
 Designed to keep things simple.**
 
----
+<p>
+  <a href="https://ehsaancolour.ai.studio/" target="_blank">
+    <img height="70" src="https://github.com/user-attachments/assets/102323a5-e5f2-4174-8a25-7be76d1ef7d3" />
+  </a>
+  <a href="https://ehsaanflow.ai.studio/" target="_blank">
+    <img height="70" src="https://github.com/user-attachments/assets/934bccf2-cafa-4494-a773-dd315ab51ccf" />
+  </a>
+  <a href="https://ehsaanqr.ai.studio/" target="_blank">
+    <img height="70" src="https://github.com/user-attachments/assets/1f63c7f3-7c86-45fd-9af6-ed9b14805820" />
+  </a>
+  <a href="https://ehsaanmovie.ai.studio/" target="_blank">
+   <img height="70" src="https://github.com/user-attachments/assets/7e3c4963-7c62-4175-9a77-b389a78a42e6" />
+  </a>
+  <a href="https://ehsaancompress.ai.studio/" target="_blank">
+   <img height="70" src="https://github.com/user-attachments/assets/de9dd1ed-3480-442f-af74-62c3924dd747" />
+</p>
+<br>
 
-## ◈ PART OF EHSAAN
 
-There Are Things That Is the growing collection of small digital tools under the **EHSAAN** project.
-
-Different tools.  
-Same philosophy.
-
-**Make useful things. Make them feel good to use.**
-
-> [!NOTE]
-> **More things from EHSAAN:**
-> 
-> 🏠 [**EHSAAN ULLAH**](https://github.com/ehsaanullah0/fertenix) — Portfolio for the web dev work.
->
->  ⚡ [ **EHSAAN WEBSITE**](https://ehsaan.odoo.com/) — The main home of the EHSAAN project and everything around it.
-> 
-> 🗜️ [**EHSAAN COMPRESS**](https://ehsaancompress.ai.studio/) — Compress images without the unnecessary fuss.
->
-> 💥 [**EHSAAN QR**](https://ehsaanqr.ai.studio/) — Generate stunning QR codes for nearly anything.
->
-> ⭕ [**EHSAAN FILES** ](https://ehsaanfiles.ai.studio/) — transfer files with encryption.
-> 
-> 🔗 [**EHSAAN COLOUR STUDIO**](https://github.com/ehsaanullah0/colour-studio) — Explore, create, and work with colours.
-> 
-> 📌 [**NIAGARA RELEASE**](https://github.com/ehsaanullah0/niagara-premium) — A Morph patch for the original apk.
 
 ---
 
