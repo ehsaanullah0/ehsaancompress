@@ -1,7 +1,7 @@
 # 🗜️ EHSAAN COMPRESS
 
 <p align="center">
-<img width="200" height="200" src="https://github.com/user-attachments/assets/5e9482b0-4af5-44c6-95b4-d38c92f610f0" />
+<img width="1796" height="876" alt="Ehsaан Compress App Promo Banner" src="https://github.com/user-attachments/assets/0eef5e0b-3d1a-4164-a1da-bfd6bedebb43" />
 </p>
 
 ### **Compress smarter. Keep it clean.**
