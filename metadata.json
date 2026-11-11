@@ -1,6 +1,6 @@
 {
   "name": "Ehsaan Compressor",
-  "description": "A minimal, high-performance image compression tool featuring custom format conversion, target size reduction controls, and side-by-side comparison.",
+  "description": "A minimal, high-performance image tool featuring compression, background removal, custom format conversion, and side-by-side comparison.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

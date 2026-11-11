@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 import { CompressionSettings, CompressionMode, OutputFormat } from '../types';
-import { Sliders, FileType, Maximize2, Zap, HelpCircle, Flame } from 'lucide-react';
+import { Sliders, FileType, Maximize2, Zap, HelpCircle, Flame, AlertTriangle } from 'lucide-react';
 
 interface CompressionControlsProps {
   settings: CompressionSettings;
@@ -26,14 +26,13 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
 
   // Compute adaptive bounds based on uploaded image size
   const sliderMax = referenceFileSizeKb && referenceFileSizeKb > 10 ? referenceFileSizeKb : 500;
-  const sliderMin = Math.max(5, Math.min(20, Math.round(sliderMax * 0.05)));
+  const sliderMin = 0; // Allow section to reach zero for complete data input flexibility
   const sliderStep = sliderMax > 500 ? 10 : sliderMax > 100 ? 5 : 1;
 
   const clampedTargetKb = Math.min(sliderMax, Math.max(sliderMin, settings.targetSizeKb));
-  const sliderFillPercent = Math.min(
-    100,
-    Math.max(0, ((clampedTargetKb - sliderMin) / (sliderMax - sliderMin)) * 100)
-  );
+  const sliderFillPercent = sliderMax > 0
+    ? Math.min(100, Math.max(0, ((clampedTargetKb - sliderMin) / (sliderMax - sliderMin)) * 100))
+    : 0;
 
   // Adaptive presets matching user's request (e.g. if 250kb -> 200kb, 100kb, 50kb or custom)
   const adaptivePresets = referenceFileSizeKb
@@ -51,8 +50,8 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
           val: Math.round(referenceFileSizeKb * 0.25),
         },
         {
-          label: `${Math.max(5, Math.round(referenceFileSizeKb * 0.1))} KB (-90%)`,
-          val: Math.max(5, Math.round(referenceFileSizeKb * 0.1)),
+          label: `${Math.max(10, Math.round(referenceFileSizeKb * 0.1))} KB (-90%)`,
+          val: Math.max(10, Math.round(referenceFileSizeKb * 0.1)),
         },
       ]
     : [
@@ -75,7 +74,8 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
   };
 
   const handleTargetSizeChange = (value: number) => {
-    onChange({ ...settings, targetSizeKb: Math.max(10, value) });
+    const cleanVal = isNaN(value) ? 0 : Math.max(0, Math.round(value));
+    onChange({ ...settings, targetSizeKb: cleanVal });
   };
 
   const handleQualityChange = (value: number) => {
@@ -241,16 +241,32 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
 
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-zinc-500 dark:text-zinc-400 material:text-amber-800/70">Exact Cap:</span>
-                  <div className="flex items-center bg-zinc-100 border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 material:bg-[#FFFDF7] material:border-amber-300 rounded-xl overflow-hidden focus-within:border-red-500 focus-within:ring-1 focus-within:ring-red-500 material:focus-within:border-amber-500 material:focus-within:ring-amber-400/50">
+                  <div className={`flex items-center bg-zinc-100 border dark:bg-zinc-900 material:bg-[#FFFDF7] rounded-xl overflow-hidden transition-colors focus-within:ring-2 ${
+                    settings.targetSizeKb < 10
+                      ? 'border-red-500 ring-2 ring-red-500/30 dark:border-red-500'
+                      : 'border-zinc-200 dark:border-zinc-800 material:border-amber-300 focus-within:border-red-500 focus-within:ring-red-500/30'
+                  }`}>
                     <input
                       ref={customInputRef}
                       type="number"
-                      min={sliderMin}
+                      min={0}
                       max={sliderMax * 2}
-                      value={settings.targetSizeKb}
-                      onChange={(e) => handleTargetSizeChange(Number(e.target.value))}
-                      className="w-20 px-2 py-0.5 text-sm font-mono font-bold text-zinc-900 dark:text-white material:text-amber-950 bg-transparent text-right focus:outline-none focus:text-red-600 dark:focus:text-red-400 material:focus:text-amber-950"
-                      title="Enter custom exact size in KB"
+                      value={settings.targetSizeKb === 0 ? '' : settings.targetSizeKb}
+                      onChange={(e) => {
+                        const valStr = e.target.value;
+                        if (valStr === '') {
+                          onChange({ ...settings, targetSizeKb: 0 });
+                        } else {
+                          handleTargetSizeChange(Number(valStr));
+                        }
+                      }}
+                      className={`w-20 px-2 py-0.5 text-sm font-mono font-bold bg-transparent text-right focus:outline-none transition-colors ${
+                        settings.targetSizeKb < 10
+                          ? 'text-red-600 dark:text-red-400 font-extrabold'
+                          : 'text-zinc-900 dark:text-white material:text-amber-950'
+                      }`}
+                      placeholder="0"
+                      title="Enter custom exact size in KB (minimum 10 KB recommended)"
                     />
                     <span className="text-xs font-mono text-zinc-500 dark:text-zinc-400 material:text-amber-800/70 pr-2">KB</span>
                   </div>
@@ -262,7 +278,7 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
                 <input
                   id={targetSizeSliderId}
                   type="range"
-                  min={sliderMin}
+                  min={0}
                   max={sliderMax}
                   step={sliderStep}
                   value={clampedTargetKb}
@@ -273,14 +289,30 @@ export const CompressionControls: React.FC<CompressionControlsProps> = ({
                   }}
                 />
                 <div className="flex justify-between text-[11px] text-zinc-500 dark:text-zinc-400 material:text-amber-800/70 font-mono mt-2">
-                  <span>{sliderMin} KB</span>
-                  <span>{Math.round(sliderMin + (sliderMax - sliderMin) * 0.33)} KB</span>
-                  <span>{Math.round(sliderMin + (sliderMax - sliderMin) * 0.66)} KB</span>
+                  <span>0 KB</span>
+                  <span>{Math.round(sliderMax * 0.33)} KB</span>
+                  <span>{Math.round(sliderMax * 0.66)} KB</span>
                   <span className="text-zinc-800 dark:text-zinc-300 material:text-amber-950 font-semibold">
                     {sliderMax} KB {referenceFileSizeKb ? '(Original)' : ''}
                   </span>
                 </div>
               </div>
+
+              {/* Warning Notice when target size is below 10 KB */}
+              {settings.targetSizeKb < 10 && (
+                <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-red-50 border border-red-200/90 text-red-700 dark:bg-red-950/40 dark:border-red-900/60 dark:text-red-300 material:bg-red-100 material:border-red-300 material:text-red-900 text-xs animate-fade-in shadow-xs">
+                  <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5 stroke-[2.5]" />
+                  <div className="space-y-0.5">
+                    <p className="font-bold text-red-700 dark:text-red-300 flex items-center gap-1.5">
+                      <span>Target file size below 10 KB</span>
+                      <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-red-200/80 text-red-900 dark:bg-red-900/80 dark:text-red-100 uppercase font-semibold">Warning</span>
+                    </p>
+                    <p className="text-[11px] opacity-90 leading-relaxed">
+                      Please increase the file size above 10 KB. Setting a target below 10 KB leads to extreme pixel distortion and image header failure.
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Adaptive Target Size Presets & Custom Trigger */}
               <div className="flex items-center gap-2 pt-1 flex-wrap">

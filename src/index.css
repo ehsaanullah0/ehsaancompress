@@ -63,3 +63,17 @@
     linear-gradient(45deg, transparent 75%, #fef3c7 75%),
     linear-gradient(-45deg, transparent 75%, #fef3c7 75%);
 }
+
+/* Hide scrollbars (slidebars) across all browsers */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

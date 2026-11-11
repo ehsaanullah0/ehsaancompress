@@ -15,6 +15,10 @@ import {
   Check,
   Loader2,
   AlertCircle,
+  AlertTriangle,
+  ShieldCheck,
+  FileText,
+  Zap,
   Maximize2,
 } from 'lucide-react';
 
@@ -60,11 +64,19 @@ export const ImageComparisonModal: React.FC<ImageComparisonModalProps> = ({
       setPreviewSrc(url);
     }
 
-    // Set compressed source
-    if (item.compressedUrl) {
-      setCompressedSrc(item.compressedUrl);
-    } else if (item.compressedBlob) {
-      const url = URL.createObjectURL(item.compressedBlob);
+    // Set compressed / processed source
+    const isBgActive = item.lastAction === 'remove_bg' || (item.hasBgRemoved && !item.compressedUrl);
+    const targetUrl = isBgActive
+      ? item.bgRemovedUrl || item.compressedUrl
+      : item.compressedUrl || item.bgRemovedUrl;
+    const targetBlob = isBgActive
+      ? item.bgRemovedBlob || item.compressedBlob
+      : item.compressedBlob || item.bgRemovedBlob;
+
+    if (targetUrl) {
+      setCompressedSrc(targetUrl);
+    } else if (targetBlob) {
+      const url = URL.createObjectURL(targetBlob);
       setCompressedSrc(url);
     }
   }, [item?.id, item?.previewUrl, item?.compressedUrl, item?.compressedBlob, item?.file]);
@@ -248,7 +260,7 @@ export const ImageComparisonModal: React.FC<ImageComparisonModalProps> = ({
         </div>
 
         {/* Compression Metrics Strip */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4 sm:px-6 py-2.5 bg-zinc-50/60 border-b border-zinc-200 dark:bg-zinc-900/40 dark:border-zinc-800/80 material:bg-amber-50/50 material:border-amber-200 text-xs font-mono shrink-0">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 px-4 sm:px-6 py-2.5 bg-zinc-50/60 border-b border-zinc-200 dark:bg-zinc-900/40 dark:border-zinc-800/80 material:bg-amber-50/50 material:border-amber-200 text-xs font-mono shrink-0">
           <div className="space-y-0.5">
             <span className="text-[10px] text-zinc-500 dark:text-zinc-400 material:text-amber-800/70 uppercase block">
               Original Size
@@ -301,18 +313,62 @@ export const ImageComparisonModal: React.FC<ImageComparisonModalProps> = ({
 
           <div className="space-y-0.5">
             <span className="text-[10px] text-zinc-500 dark:text-zinc-400 material:text-amber-800/70 uppercase block">
-              Format
+              Quality Assessment
             </span>
             <div className="flex items-center gap-1.5">
-              <span className="uppercase font-bold text-zinc-800 dark:text-zinc-200 material:text-amber-950">
-                {item.compressedType ? item.compressedType.replace('image/', '') : item.originalType.replace('image/', '')}
-              </span>
-              <span className="text-[10px] text-zinc-500 uppercase px-1.5 py-0.2 rounded bg-zinc-200 dark:bg-zinc-800 material:bg-amber-200/80">
-                100% Client-side
-              </span>
+              {item.qualityAssessment ? (
+                <span
+                  className={`inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full border ${
+                    item.qualityAssessment.level === 'low'
+                      ? 'bg-emerald-100 text-emerald-800 border-emerald-300 dark:bg-emerald-950/80 dark:text-emerald-300 dark:border-emerald-700/60'
+                      : item.qualityAssessment.level === 'moderate'
+                      ? 'bg-yellow-100 text-yellow-800 border-yellow-300 dark:bg-yellow-950/80 dark:text-yellow-300 dark:border-yellow-700/60'
+                      : item.qualityAssessment.level === 'high'
+                      ? 'bg-orange-100 text-orange-800 border-orange-300 dark:bg-orange-950/80 dark:text-orange-300 dark:border-orange-700/60'
+                      : 'bg-red-100 text-red-800 border-red-300 dark:bg-red-950/90 dark:text-red-300 dark:border-red-700/80'
+                  }`}
+                >
+                  {item.qualityAssessment.level === 'low' ? (
+                    <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+                  ) : item.qualityAssessment.level === 'moderate' ? (
+                    <Zap className="w-3 h-3 text-yellow-600 dark:text-yellow-400" />
+                  ) : (
+                    <AlertTriangle className="w-3 h-3 text-orange-600 dark:text-orange-400" />
+                  )}
+                  <span>{item.qualityAssessment.statusLabel}</span>
+                </span>
+              ) : (
+                <span className="text-zinc-500 font-mono">Analyzed</span>
+              )}
+            </div>
+          </div>
+
+          <div className="space-y-0.5">
+            <span className="text-[10px] text-zinc-500 dark:text-zinc-400 material:text-amber-800/70 uppercase block">
+              Fidelity Metrics
+            </span>
+            <div className="flex items-center gap-1.5">
+              {item.qualityAssessment ? (
+                <span className="text-[11px] text-zinc-700 dark:text-zinc-300 material:text-amber-900">
+                  SSIM: <strong className="font-mono">{(item.qualityAssessment.ssim * 100).toFixed(0)}%</strong> | Edge: <strong className="font-mono">{(item.qualityAssessment.edgePreservation * 100).toFixed(0)}%</strong>
+                </span>
+              ) : (
+                <span className="uppercase font-bold text-zinc-800 dark:text-zinc-200 material:text-amber-950">
+                  {item.compressedType ? item.compressedType.replace('image/', '') : item.originalType.replace('image/', '')}
+                </span>
+              )}
             </div>
           </div>
         </div>
+
+        {/* Warning Callout Bar in Modal if High or Critical Loss */}
+        {item.qualityAssessment && (item.qualityAssessment.warningTitle || item.qualityAssessment.targetConflict) && (
+          <div className="flex items-center gap-3 px-4 sm:px-6 py-2 bg-amber-500/15 border-b border-amber-500/30 text-xs text-amber-900 dark:text-amber-200 material:bg-amber-400/20 shrink-0">
+            <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span className="font-semibold">{item.qualityAssessment.warningTitle || 'Quality Notice'}:</span>
+            <span className="truncate">{item.qualityAssessment.warningMessage}</span>
+          </div>
+        )}
 
         {/* Main Interactive Stage Area */}
         <div

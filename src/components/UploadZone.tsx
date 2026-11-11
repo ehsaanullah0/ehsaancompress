@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { UploadCloud, FolderPlus } from 'lucide-react';
+import { EhsaanLogo } from './EhsaanLogo';
 
 interface UploadZoneProps {
   onFilesSelected: (files: File[]) => void;
@@ -100,9 +101,16 @@ export const UploadZone: React.FC<UploadZoneProps> = ({
             : 'border-zinc-300 hover:border-zinc-400 bg-white hover:bg-zinc-50/80 shadow-sm dark:border-zinc-800 dark:hover:border-zinc-600 dark:bg-zinc-950/60 dark:hover:bg-zinc-900/40 material:border-amber-300/80 material:hover:border-amber-400 material:bg-[#FFFDF7] material:hover:bg-[#FFFBEB]/70 material:shadow-[0_2px_12px_rgba(245,158,11,0.06)]'
         }`}
       >
-        {/* Subtle decorative glowing badge */}
-        <div className="w-14 h-14 rounded-2xl bg-zinc-100 border border-zinc-200 text-zinc-700 group-hover:scale-105 group-hover:border-zinc-300 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300 dark:group-hover:border-zinc-700 material:bg-amber-100 material:border-amber-200 material:text-amber-800 material:group-hover:border-amber-300 flex items-center justify-center transition-all duration-300 shadow-sm">
-          <UploadCloud className="w-7 h-7 text-zinc-600 group-hover:text-red-600 dark:text-zinc-300 dark:group-hover:text-red-500 material:text-amber-700 material:group-hover:text-amber-900 transition-colors duration-300" />
+        {/* Subtle decorative brand icon badge */}
+        <div className="relative group/logo">
+          <EhsaanLogo
+            size={56}
+            shape="rounded-rect"
+            className="group-hover:scale-105 transition-transform duration-300 ring-2 ring-pink-500/20 shadow-md"
+          />
+          <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-xs">
+            <UploadCloud className="w-3 h-3 text-purple-600 dark:text-purple-400" />
+          </div>
         </div>
 
         <div className="space-y-1.5 max-w-md">
