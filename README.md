@@ -11,24 +11,6 @@ A simple, fast, and privacy-friendly image compression tool built to make reduci
 **Made for everyday uploads.
 Built for smaller files.
 Designed to keep things simple.**
-
-<p>
-  <a href="https://ehsaancolour.ai.studio/" target="_blank">
-   <img width="170" src="https://github.com/user-attachments/assets/00762234-2f32-40c0-8640-225206908e5a" />
-  </a>
-  <a href="https://ehsaanflow.ai.studio/" target="_blank">
- <img width="170" src="https://github.com/user-attachments/assets/f1f073ca-70f6-418a-8ea8-dbf07780247f" />
-  </a>
-  <a href="https://ehsaanqr.ai.studio/" target="_blank">
- <img width="170" src="https://github.com/user-attachments/assets/432a43cc-999e-4f0d-8674-07443b19ade8" />
-  </a>
-  <a href="https://ehsaanplay.ai.studio/" target="_blank">
- <img width="170" src="https://github.com/user-attachments/assets/7d64243b-7eaa-49c8-bf67-897415f990ee" />
-  </a>
-  <a href="https://ehsaancompress.ai.studio/" target="_blank">
- <img width="170" src="https://github.com/user-attachments/assets/d3a5b184-a158-4f39-abe6-a3795ef7c2eb" />
-</p>
-<br>
 </div>
 
 
@@ -40,7 +22,8 @@ Designed to keep things simple.**
 
 Whether you're preparing an image for a government website, online form, application, or simply trying to save storage — drop your image in and compress it.
 
-🔗 **[ehsaancompress.ai.studio](https://ehsaancompress.ai.studio/)**
+[<img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/7afd8861-9ded-4590-bb59-a62160d42721" />](https://rookieenough.github.io/Orion-Data/app/?id=ehsaancompress)
+[<img width="212" height="56" src="https://github.com/user-attachments/assets/9151bdd1-3a42-49ba-948d-89356ceaf511" />](https://ehsaancompress.ai.studio/)
 
 ---
 
@@ -126,23 +109,32 @@ That means your images don't need to become part of some mysterious cloud storag
 **Compress your images.
 Keep control of your files.**
 
-## 🔗 **https://ehsaancompress.ai.studio/**
+[<img width="212" height="56" src="https://github.com/user-attachments/assets/9151bdd1-3a42-49ba-948d-89356ceaf511" />](https://ehsaancompress.ai.studio/)
 
 ---
-<div align="center">
 
 ## MADE BY EHSAAN ULLAH
 **Make useful things. Make them feel good to use.**
 
-# 💛 SUPPORT THE DEVELOPMENT
-## [ CLICK HERE TO PAY DIRECTLY.](https://ehsaan.odoo.com/support)
+## 💛 SUPPORT THE DEVELOPMENT  [CLICK HERE](https://ehsaan.odoo.com/support)
 
-<img width="250" height="250" alt="ehsaan-qr-1024x1024 (1)" src="https://github.com/user-attachments/assets/7139284e-c5e5-424a-bd52-aa71ccc392a8" />
+ <sub>If you find something useful here, a ⭐ is always appreciated.</sub>
 </p>
 
-<p align="center">
-  <sub>If you find something useful here, a ⭐ is always appreciated.</sub>
-</p>
+<p>
+  <a href="https://ehsaancolour.ai.studio/" target="_blank">
+   <img width="170" src="https://github.com/user-attachments/assets/00762234-2f32-40c0-8640-225206908e5a" />
+  </a>
+  <a href="https://ehsaanflow.ai.studio/" target="_blank">
+ <img width="170" src="https://github.com/user-attachments/assets/f1f073ca-70f6-418a-8ea8-dbf07780247f" />
+  </a>
+  <a href="https://ehsaanqr.ai.studio/" target="_blank">
+ <img width="170" src="https://github.com/user-attachments/assets/432a43cc-999e-4f0d-8674-07443b19ade8" />
+  </a>
+  <a href="https://ehsaanplay.ai.studio/" target="_blank">
+ <img width="170" src="https://github.com/user-attachments/assets/7d64243b-7eaa-49c8-bf67-897415f990ee" />
+  </a>
+  <p>
 
 
 **EHSAAN ULLAH**
