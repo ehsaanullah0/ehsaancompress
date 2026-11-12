@@ -22,7 +22,7 @@ Designed to keep things simple.**
 
 Whether you're preparing an image for a government website, online form, application, or simply trying to save storage — drop your image in and compress it.
 
-[<img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/7afd8861-9ded-4590-bb59-a62160d42721" />](https://rookieenough.github.io/Orion-Data/app/?id=Ehsaan_Compress)
+[<img width="212" height="56" alt="image" src="https://github.com/user-attachments/assets/7afd8861-9ded-4590-bb59-a62160d42721" />](https://rookieenough.github.io/Orion-Data/app/?id=Ehsaan-Compress)
 [<img width="212" height="56" src="https://github.com/user-attachments/assets/9151bdd1-3a42-49ba-948d-89356ceaf511" />](https://ehsaancompress.ai.studio/)
 
 ---
