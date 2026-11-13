@@ -1,4 +1,4 @@
-# 🗜️ EHSAAN COMPRESS
+# 🗜️ EHSAAN COMPRESS/BG REMOVER
 
 <p align="center">
 <img width="1796" height="876" alt="Ehsaан Compress App Promo Banner" src="https://github.com/user-attachments/assets/0eef5e0b-3d1a-4164-a1da-bfd6bedebb43" />
@@ -13,6 +13,8 @@ Built for smaller files.
 Designed to keep things simple.**
 </div>
 
+> [!IMPORTANT]
+> This repo was archived by the owner untill 5th july 2027. the project is now in maintainance mode for that period.
 
 ---
 
@@ -40,11 +42,11 @@ Whether you're preparing an image for a government website, online form, applica
 ---
 
 
-<img width="1285" height="391" alt="image" src="https://github.com/user-attachments/assets/36203244-e220-4ac0-8fe0-49a40dcab4e3" />
+<img width="1340" height="473" src="https://github.com/user-attachments/assets/ac1796ab-ce0b-40d1-9fcf-4dfa1eff90f5" />
 
-<img width="1229" height="445" src="https://github.com/user-attachments/assets/614aa044-32bf-4490-8472-b0ee6c604da9" />
+<img width="1167" height="668" alt="image" src="https://github.com/user-attachments/assets/053ab0dd-54a4-466b-b3be-4f6ddb73da91" />
 
-<img width="1257" height="466" alt="image" src="https://github.com/user-attachments/assets/40b2f4ce-5b34-4081-a9c5-0f97853299f5" />
+<img width="1212" height="686" src="https://github.com/user-attachments/assets/48dd39cb-be38-42f9-9ae9-c7b33a69974f" />
 
 <img width="1091" height="697" alt="image" src="https://github.com/user-attachments/assets/a6478006-696d-4b38-834e-bc8ff399991d" />
 
